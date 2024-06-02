@@ -20,17 +20,24 @@
     </style>
 </head>
 <body>
+
+
+    <!-- se define un formulario post para enviar los datos y se solicitan
+         los tres valores que se piden en el ejercicio junto con el boton calcular -->
     <h1>Tabla de Amortización</h1>
     <form method="post" action="">
         <label for="monto">Monto del préstamo (Q):</label>
         <input type="number" id="monto" name="monto" step="0.01" required><br><br>
         <label for="plazo">Plazo en meses:</label>
         <input type="number" id="plazo" name="plazo" required><br><br>
-        <label for="tasa">Tasa de interés mensual (%):</label>
+        <label for="tasa">Tasa de interés mensu al (%):</label>
         <input type="number" id="tasa" name="tasa" step="0.01" required><br><br>
         <button type="submit">Calcular</button>
     </form>
 
+
+        <!-- se obtienen los valores préstamo, plazo y tas, se calcula la tabla amortizacion
+            y por ultimo se muestran en en la tabla de amortizacion-->
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $monto = floatval($_POST['monto']);

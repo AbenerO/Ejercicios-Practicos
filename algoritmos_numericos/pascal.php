@@ -81,7 +81,7 @@
                 return $resultado;
             }
 
-            //estamos enviando los datos al formulario 
+            //estamos enviando los datos al formulario ----
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $potencia = intval($_POST['potencia']);
                 if ($potencia > 0 && $potencia <= 20) {
