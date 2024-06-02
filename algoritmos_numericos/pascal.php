@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Potencia de Binomios</title>
+    <!-- Estilos -->
     <style>
         body {
             display: flex;
@@ -46,6 +47,7 @@
             <button type="submit">Calcular</button>
         </form>
 
+            <!-- calculo de cuantos combinas de k se puede seleccionar en conjunto n elementos -->
         <div class="resultado">
             <?php
             function coeficiente_binomial($n, $k)
@@ -56,6 +58,9 @@
                 return coeficiente_binomial($n - 1, $k - 1) + coeficiente_binomial($n - 1, $k);
             }
 
+
+
+            //funcion que expresa un binomio elevado a la potencia especificada
             function binomio_recursivo($potencia)
             {
                 $resultado = "";
@@ -76,6 +81,7 @@
                 return $resultado;
             }
 
+            //estamos enviando los datos al formulario 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $potencia = intval($_POST['potencia']);
                 if ($potencia > 0 && $potencia <= 20) {
